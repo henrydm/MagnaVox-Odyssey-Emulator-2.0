@@ -1,0 +1,132 @@
+﻿//GENERAL INFO
+StringCancel=Cancel
+StringOK=Ok
+StringSave=Save
+
+
+//MAIN SCREEN
+StringCartridge=Cartridge:
+StirngOverlay=Overlay:
+StringRun=Run:
+
+ToolTipCartridge=Select a Cartridge
+ToolTipOverlay=Select an Overlay
+ToolTipRun=Run Emulator!
+ToolTipSettings=Emulator Settings
+
+//OVERLAY SELECTOR
+StringSelectAnOverlay=Select an Overlay
+//OVERLAY EDIT
+StringEdit=Edit
+StringOverlaySettings=Overlay Settings
+StringOpacity=Opacity
+StringEnabled=Enabled
+ToolTipOpacityEnabled=If checked, opaque color will be shown over the spots
+StringOpaqueColor=Opaque Color
+ToolTipOpaqueColor=To Use enable Opacity and select a color from the image
+StringAsociate=Asociate
+ToolTipAsociate=If checked Asociated Cartridge will be selected after select the overlay
+StringNum=Num
+ToolTipNum=Asociated Cartridge for this overlay
+StringDragAndDropInfo=Drag and Drop Image files here to Add a Overlay
+ToolTipDragAndDrop=Works with any image but works better with png images
+StringNote=NOTE:
+StringColorInfo=Image will be converted to 256 Color bitmap and resized to 320x200.
+
+		//SETTINGS//
+		
+//CAPACITORS & PERFORMANCE
+StringCapacitorsAndPerformance=Capacitors & Performance
+StringBatSpotH=Bat Spot H
+ToolTipBatSpotH=Adjust horizontal bat spot
+StringBatSpotV=Bat Spot V
+ToolTipBatSpotV=Adjust vertical bat spot
+StringBatDampH=Bat Damp H
+ToolTipBatDampH=Adjust horizontal bat damp
+StringBatDampV=Bat Damp V
+ToolTipBatDampV=Adjust vertical bat damp
+StringBallSpotH=Ball Spot H
+ToolTipBallSpotH=Adjust horizontal ball spot
+StringBallSpotV=Ball Spot V
+ToolTipBallSpotV=Adjust vertical ball spot
+StringBatAceleration=Bat Aceleration
+ToolTipBatAceleration=Adjust bat aceleration
+StringBatDeceleration=Bat Deceleration
+ToolTipBatDeceleration=Adjust bat deceleration
+StringEngAceleration=English Acc.
+ToolTipEngAceleration=Adjust english aceleration
+StringEngDeceleration=English Dec.
+ToolTipEngDeceleration=Adjust english deceleration
+StringCapacitorsTitle=CAPACITORS
+StringCapacitorsInfo=This part defines charging capacitors,  the rate at which things Low is fast, high is slow. NOT the same values as in the schematic.
+StringBatSpots=Bat Spots
+StringBatSpotsInfo=When damped by 3-5 and/or 26-28.
+
+
+//OBJECT SIZES
+StringObjectSizes=ObjectSizes
+StringBatSizeH=Bat Size H
+ToolTipBatSizeH= Set horizontal bat size
+StringBatSizeV=Bat Size V
+ToolTipBatSizeV=Set vertical bat size
+StringBallSize=Ball Size
+ToolTipBallSize=Set the ball size (Square) set Width an Heigth
+StringWidthWallSize=Width Wall Size
+ToolTipWidthWallSize=Set Wall Size
+StringWidthWallWide= Width Wall Wide
+ToolTipWidthWallWide=Set Wall Wide
+StringWallPercentage=Wall Percentage
+ToolTipWallPercentage=Set Wall percentage
+StringWallPosition= Wall Position
+ToolTipWallPosition=Set the wall position
+StringSizeInfo=This part defines Sizes of game objects. The units are upto 6200 unless otherwise specified.
+StringBatSizeTitle=BAT SIZE
+StringBatSizeInfo=Size of the player bats. (11/16" square on 14" monitor)
+StringBallSizeTitle=BALL SIZE;
+StringBallSizeInfo=Size of the ball (Square) Horizontal an Vertical size are set by the same value.
+StringWallWidthTitle=WALL WIDTH
+StringWallWidthInfo=Normal = 7/16" on 14" monitor.
+StringWallPercentageInfo=With a "short" wall the percentage of the actual size.
+StringWallPositionInfo=Horizontal position of the "early" wall.
+
+
+//KEYBOARD
+StringKeboardSettings=Keyboard Settings
+StringPlayer1=Player 1
+StringPlayer2=Player 2
+StringMoveUp=Move Up
+StringMoveDown=Move Down
+StringMoveRight=Move Right
+StringMoveLeft= Move Right
+StringEnglishUp=English Up
+StringEnglishDown=English Down
+StringServeBall=Serve
+StringReset=Reset
+
+//OTHER SETTING
+StringOtherSettings=Other Settings
+StringGlobalSettings=Global Settings
+StringAutomaticPlayer=Automatic Player
+StringColors=Colors
+StringColor=Color
+StringTColor=TColor
+StringDOSNEnviornment=DOS Enviornment
+StringFullScreen=Full Screen
+StringHideCursor=Hide Cursor
+StringLanguage=Language
+StringOtherCapacitors=Other Capacitors;
+StringWallCapacitors=Wall Capacitor
+StringRiffleCapacitor=Riffle Capacitor
+StringRiffleCapacitorTitle=RIFFLE CAPACITOR:
+StringRiffleCapacitorInfo=Not actually a capacitor in reality. Controls the movement rate of the rifle cursor
+StringUserFolder=User Folder
+StringUserFolderInfo=User Folder is used to store overlay files, configuration and all data to run the emulator
+StringOpen=Open
+StringOutput=Output;
+StringResolution=Resolution
+
+
+
+
+
+

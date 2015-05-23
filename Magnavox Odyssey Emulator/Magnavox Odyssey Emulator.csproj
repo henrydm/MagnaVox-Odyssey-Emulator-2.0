@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E43B835-AFCD-4C7B-A78E-EFFFD9892CDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magnavox_Odyssey_Emulator</RootNamespace>
+    <AssemblyName>Magnavox Odyssey Emulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Odyssey.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuxClasses\Cartridge.cs" />
+    <Compile Include="AuxClasses\ConvertorTo8Bit.cs" />
+    <Compile Include="AuxClasses\Overlay.cs" />
+    <Compile Include="AuxClasses\Language.cs" />
+    <Compile Include="AuxClasses\SelectorCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuxClasses\SelectorCart.Designer.cs">
+      <DependentUpon>SelectorCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuxClasses\SelectorOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuxClasses\SelectorOverlay.Designer.cs">
+      <DependentUpon>SelectorOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuiltInOverlays\OverlaysBinary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlaysBinary.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BuiltInOverlays\OverlaysImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OverlaysImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorMng.cs" />
+    <Compile Include="Controls\KnobControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LB7SegmentDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LB7SegmentDisplay.designer.cs">
+      <DependentUpon>LB7SegmentDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LB7SegmentDisplayRenderer.cs" />
+    <Compile Include="Controls\LBDigitalMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LBDigitalMeter.designer.cs">
+      <DependentUpon>LBDigitalMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBDigitalMeterRenderer.cs" />
+    <Compile Include="Controls\LBIndustrialCtrlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LBIndustrialCtrlBase.designer.cs">
+      <DependentUpon>LBIndustrialCtrlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LBLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LBLed.designer.cs">
+      <DependentUpon>LBLed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LedRenderer.cs" />
+    <Compile Include="Controls\MathFunc.cs" />
+    <Compile Include="Controls\Renderer.cs" />
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesGraphics.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourcesGraphics.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuxClasses\SelectorCart.resx">
+      <DependentUpon>SelectorCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuxClasses\SelectorOverlay.resx">
+      <DependentUpon>SelectorOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuiltInOverlays\OverlaysBinary.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OverlaysBinary.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuiltInOverlays\OverlaysImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OverlaysImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LB7SegmentDisplay.resx">
+      <DependentUpon>LB7SegmentDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LBDigitalMeter.resx">
+      <DependentUpon>LBDigitalMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LBLed.resx">
+      <DependentUpon>LBLed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourcesGraphics.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourcesGraphics.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Analogic.Overlay" />
+    <None Include="Resources\Analogic.png.resource" />
+    <None Include="Resources\BasketBall.Overlay" />
+    <None Include="Resources\BasketBall.png.resource" />
+    <None Include="Resources\Brain Wave.Overlay" />
+    <None Include="Resources\Brain Wave.png.resource" />
+    <None Include="Resources\Cat and Mouse.Overlay" />
+    <None Include="Resources\Cat and Mouse.png.resource" />
+    <None Include="Resources\Català.lang" />
+    <None Include="Resources\catandmouse1920x1490.Overlay" />
+    <None Include="Resources\English.lang" />
+    <None Include="Resources\Español.lang" />
+    <None Include="Resources\Football.Overlay" />
+    <None Include="Resources\Football.png.resource" />
+    <None Include="Resources\Hockey.Overlay" />
+    <None Include="Resources\Hockey.png.resource" />
+    <None Include="Resources\KEYBOARD.DAT" />
+    <None Include="Resources\ODYEMUINI" />
+    <None Include="Resources\ODYEMUTXT" />
+    <None Include="Resources\Percepts.Overlay" />
+    <None Include="Resources\Percepts.png.resource" />
+    <None Include="Resources\Roulette.Overlay" />
+    <None Include="Resources\Roulette.png.resource" />
+    <None Include="Resources\Simon Says.Overlay" />
+    <None Include="Resources\Simon Says.png.resource" />
+    <None Include="Resources\Ski.Overlay" />
+    <None Include="Resources\Ski.png.resource" />
+    <None Include="Resources\Soccer.Overlay" />
+    <None Include="Resources\Soccer.png.resource" />
+    <None Include="Resources\States.Overlay" />
+    <None Include="Resources\States.png.resource" />
+    <None Include="Resources\Submarine.Overlay" />
+    <None Include="Resources\Submarine.png.resource" />
+    <None Include="Resources\Tennis.png.resource" />
+    <None Include="Resources\Win.Overlay" />
+    <None Include="Resources\Win.png.resource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SDL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SDL_net.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ODYEMU.EXE" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win.png" />
+    <None Include="Resources\Tennis.png" />
+    <None Include="Resources\Submarine.png" />
+    <None Include="Resources\States.png" />
+    <None Include="Resources\Soccer.png" />
+    <None Include="Resources\Ski.png" />
+    <None Include="Resources\Simon Says.png" />
+    <None Include="Resources\Roulette.png" />
+    <None Include="Resources\Percepts.png" />
+    <None Include="Resources\Hockey.png" />
+    <None Include="Resources\Football.png" />
+    <None Include="Resources\Cat and Mouse.png" />
+    <None Include="Resources\Brain Wave.png" />
+    <None Include="Resources\BasketBall.png" />
+    <None Include="Resources\Analogic.png" />
+    <None Include="Resources\Tennis.Overlay" />
+    <None Include="Resources\catandmouse1920x1490.png" />
+    <None Include="Resources\none.png" />
+    <None Include="Resources\buttonCart12.Image.png" />
+    <None Include="Resources\buttonCart11.Image.png" />
+    <None Include="Resources\buttonCart10.Image.png" />
+    <None Include="Resources\buttonCart9.Image.png" />
+    <None Include="Resources\buttonCart8.Image.png" />
+    <None Include="Resources\buttonCart7.Image.png" />
+    <None Include="Resources\buttonCart6.Image.png" />
+    <None Include="Resources\buttonCart5.Image.png" />
+    <None Include="Resources\buttonCart4.Image.png" />
+    <None Include="Resources\buttonCart3.Image.png" />
+    <None Include="Resources\buttonCart2.Image.png" />
+    <None Include="Resources\buttonCart1.Image.png" />
+    <Content Include="Odyssey.ico" />
+    <None Include="Resources\pickCurs.png" />
+    <None Include="Resources\pickColor.png" />
+    <None Include="Resources\BMPTORLE.EXE" />
+    <None Include="Resources\odysseyMachineLight.png" />
+    <None Include="Resources\odysseyMachine.png" />
+    <None Include="Resources\DosBox.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

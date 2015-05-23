@@ -1,0 +1,132 @@
+﻿//GENERAL INFO
+StringCancel=Cancelar
+StringOK=Ok
+StringSave=Guardar
+
+
+//MAIN SCREEN
+StringCartridge=Cartucho:
+StirngOverlay=Overlay:
+StringRun=Arrancar:
+
+ToolTipCartridge=Selecciona un Cartucho
+ToolTipOverlay=Selecciona un Overlay
+ToolTipRun=Arrancar Emulador!
+ToolTipSettings=Configuración
+
+//OVERLAY SELECTOR
+StringSelectAnOverlay=Selecciona un Overlay
+//OVERLAY EDIT
+StringEdit=Edición
+StringOverlaySettings=Configuración del Overlay
+StringOpacity=Opacidad
+StringEnabled=Activado
+ToolTipOpacityEnabled=Si se activa, el color seleccionado quedará por detras de las palas
+StringOpaqueColor=Color Opaco
+ToolTipOpaqueColor=Uso: Activar Color Opaco primero y seleccionar un color del overlay
+StringAsociate=Asociar
+ToolTipAsociate=Si está activado el cartucho asociado sera seleccionado al seleccionar este overlay
+StringNum=Num
+ToolTipNum=Cartucho asociado para este overlay
+StringDragAndDropInfo=Arrastra aqui los ficheros de imagen para crear un nuevo Overlay
+ToolTipDragAndDrop=Usar preferiblemente archivos png aunque funciona con cualquier tipo de imagen
+StringNote=NOTA:
+StringColorInfo=La imagen será convertida a 256 Colores y escalada a 320x200.
+
+		//SETTINGS//
+		
+//CAPACITORS & PERFORMANCE
+StringCapacitorsAndPerformance=Condensadores y Rendimiento
+StringBatSpotH=Spot Pala H
+ToolTipBatSpotH=Ajusta el spot horizontal de las palas
+StringBatSpotV=Spot Pala V
+ToolTipBatSpotV=Ajusta el spot vertical de las palas
+StringBatDampH=Rebote Pala H
+ToolTipBatDampH=Ajusta el rebote horizontal de las palas
+StringBatDampV=Rebote Pala V
+ToolTipBatDampV=Ajusta el rebote vertical de las palas
+StringBallSpotH=Spot Pelota H
+ToolTipBallSpotH=Ajusta el spot horizontal de la pelota
+StringBallSpotV=Spot Pelota V
+ToolTipBallSpotV=Ajusta el spot vertical de la pelota
+StringBatAceleration=Aceler. Pala
+ToolTipBatAceleration=Ajusta la aceleración de las palas
+StringBatDeceleration=Desacel. Pala
+ToolTipBatDeceleration=Ajusta la desaceleración de las palas
+StringEngAceleration=Aceleration Eng.
+ToolTipEngAceleration=Ajusta la aceleración del english
+StringEngDeceleration=Desacel. Eng.
+ToolTipEngDeceleration=Ajusta la desaceleración del english
+StringCapacitorsTitle=CONDENSADORES
+StringCapacitorsInfo=En esta parte se definine la carga de los condensadores,  el ratio al cual los objetos se moveran despacio o rápido, A carga mas alta mas despacio. NO son los mismos valores que en el esquema original.
+StringBatSpots=SPOTS DE PALAS
+StringBatSpotsInfo=Ajustar al rebote por 3-5 y/o 26-28.
+
+
+//OBJECT SIZES
+StringObjectSizes=Tamaño de Objetos
+StringBatSizeH=Tamaño Pala H
+ToolTipBatSizeH=Ajusta el tamaño horizontal de las palas
+StringBatSizeV=Tamaño Pala V
+ToolTipBatSizeV=Ajusta el tamaño vertical de las palas
+StringBallSize=Tamaño Pelota
+ToolTipBallSize=Ajusta el tamaño de lapelota (Cuadrado) se asigna el mismo valor a la altura y al ancho
+StringWidthWallSize=Tamaño Pared
+ToolTipWidthWallSize=Ajusta el tamaño de la pared
+StringWidthWallWide=Ancho Pared
+ToolTipWidthWallWide=Ajusta el ancho de la pared
+StringWallPercentage=Porcentage Pared
+ToolTipWallPercentage=Ajusta el porcentage de la pared
+StringWallPosition=Posicion Pared
+ToolTipWallPosition=Ajusta la posicion de la pared
+StringSizeInfo=En esta parte se define el tamaño de los objetos. El valor máximo es 6200.
+StringBatSizeTitle=TAMAÑO DE PALAS:
+StringBatSizeInfo=Tamaño de la palas para ambos jugadores. (cuadrado 11/16" en un monitor de 14")
+StringBallSizeTitle=TAMAÑO DE LA PELOTA;
+StringBallSizeInfo=Los valores horizontal i vertical se ajustan con el mismo valor.
+StringWallWidthTitle=ANCHO DE LA PARED
+StringWallWidthInfo=Normal = 7/16" en un monitor de 14".
+StringWallPercentageInfo=Con un Tamaño "pequeño", el porcentage actual de la pared.
+StringWallPositionInfo=Posición Horizontal de la pared mas cercana.
+
+
+//KEYBOARD
+StringKeboardSettings=Ajustes de Teclado
+StringPlayer1=Jugador 1
+StringPlayer2=Jugador 2
+StringMoveUp=Mover Arriba
+StringMoveDown=Mover Abajo
+StringMoveRight=Mover Derecha
+StringMoveLeft=Mover Izquierda
+StringEnglishUp=English Arriba
+StringEnglishDown=English Abajo
+StringServeBall=Servir
+StringReset=Reset
+
+//OTHER SETTING
+StringOtherSettings=Otros Ajustes
+StringGlobalSettings=Configuración General
+StringAutomaticPlayer=Jugadores Automáticos
+StringColors=Colores
+StringColor=Color
+StringTColor=TColor
+StringDOSNEnviornment=Entorno DOS
+StringFullScreen=Pantalla Completa
+StringHideCursor=Ocultar Cursor
+StringLanguage=Idioma
+StringOtherCapacitors=Otros Condensadores;
+StringWallCapacitors=Cnd. Pared
+StringRiffleCapacitor=Cnd. Rifle
+StringRiffleCapacitorTitle=CONDENSADOR DEL RIFLE:
+StringRiffleCapacitorInfo=Realmente no es un condensador. Ajusta el ratio de movimineto del cursos cuando se usa el rifle.
+StringUserFolder=Carpeta de Usuario
+StringUserFolderInfo=La carpeta de Usuario se usa para almacenar la configuracion de teclado, idiomas, overlays... necearia para ejecutar el emulador
+StringOpen=Abrir
+StringOutput=Salida;
+StringResolution=Resolución
+
+
+
+
+
+

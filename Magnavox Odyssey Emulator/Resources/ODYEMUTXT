@@ -1,0 +1,326 @@
+
+                        ===========================
+                                   ODYEMU
+                        Magnavox Odyssey 1 Emulator
+                        ===========================
+
+Design & Development :  Paul Robson, David Winter
+Coding :                Paul Robson
+Testing & Resources :   David Winter
+
+Homepage : http://superpong.8m.com/odyemu.htm
+
+
+Before all:
+-----------
+
+    Please do not ask a WINDOWS version. We will do this later, since
+    the DOS version is not finished.
+
+    Please do not ask for the original games manual. We are aware that
+    it is very important to play the games, but the only playable games
+    don't require the manual. Be patient !!!
+
+    People willing to help with artwork are more than welcome as long
+    as their graphics are not "remakes" or "redrawings", but look
+    exactly like the original Odyssey overlays and accessories.
+
+
+Introduction
+------------
+
+    This program is an emulator of the Magnavox Odyssey 1, the first ever
+    Videogame console. Now you can have hours of fun playing the exciting
+    games packaged with this thrilling electronic toy.
+
+    Before all: the Odyssey has NO sound and uses NO ROMs, so do not ask
+    for ROMs, and do not ask for additional cartridge files since the 12
+    cartridges ever made for the Odyssey are provided with the emulator.
+
+    This is actually an emulator, not a simulator. The Odyssey is effectively
+    a programmable analogue computer, which is rewired by plugging in
+    cartridges, connecting different bits of the circuit in different ways
+    (you can look at the complete Odyssey schematics, available on the web
+    at http://www.vintagegame.com : it is not as complex as it looks, since
+    the layout is ruined by the need to have the connector placed on the far
+    left).
+
+    The program doesn't simply simulate the behaviour of the games. It
+    emulates the behaviour of the circuitry in a fairly simplified manner.
+    The design of the Odyssey is modular (see David Winter's pages) and as
+    such some of it can't be rewired ; you don't need Spice to simulate it.
+
+    However, it is possible, within certain limits, to use it to develop
+    and test games for the machine.
+
+
+Running the Emulator:
+---------------------
+
+    To run an Odyssey cartridge, simply type: ODYEMU <CartName>.
+    For example, type "ODYEMU CART1.MO1" to play cartridge 1.
+    Type "ODYEMU TENNIS.MO1" to play TENNIS (cartridge 1 with TENNIS overlay).
+
+    Cartridge names have the extension ".MO1" by default, and a same
+    cartridge can be used to play several different games. See the Odyssey
+    manual for more information.
+
+    Because the emulator uses lots of keys, you can use the SETKEY.EXE
+    program to set the keys used under emulation. The keys are saved in the
+    KEYBOARD.DAT file.
+
+    The Odyssey is not a "console-only" system. Except TENNIS, nearly ALL
+    of the games require numerous accessories to be played. Those accessories
+    are not yet implemented. They will be available as soon as we get enough
+    time to design their artwork and software manager. All the overlays are
+    not yet implemented: for now, only TENNIS and FOOTBALL overlays are
+    already available. Only FOOTBALL was hand-drawn from a true overlay.
+
+
+Controls:
+---------
+
+    A major problem is the emulation of the rotary controls. The controllers
+    of the Odyssey were made of three rotary knobs (potentiometers) and one
+    push-button. Emulating those potentiometers is not possible unless you
+    design your own hardware allowing to connect original (or remade)
+    Odyssey controllers to your PC. The emulator will simulate the user
+    action on those potentiometers via 6 keys (Up, Down, Left, Right,
+    English Up and English Down). Note that it is possible to have the
+    Up/Down and English Up/Down as the same keys. There is also a seventh
+    key emulating the hand button controller. This is normally (but not
+    always) used to serve the ball.
+
+    By default these are :
+
+                Left    Right     Up      Down    EngUp   EngDown   Serve
+    Player 1      Q       W       R        D        T        F        Z
+    Player 2      Y       U       O        K        P        L        M
+
+    If you don't like this combination, you can redefine any of those keys
+    using the SETKEY.EXE program. It's incredibly basic but it does the job.
+    The keys are saved in the KEYBOARD.DAT file. If you want to restore the
+    original settings, just delete this file and run SETKEY.EXE again.
+
+    It may be easier if the Up/Down and the English Up/Down are on the same
+    key. It's down to personal preference.
+
+    In a futile attempt to get them to operate like rotary controllers these
+    have an acceleration and deceleration: they do not operate in a simple
+    on/off fashion.
+
+    To help with the English, the current english position is shown by a
+    little bar sticking out of the left and right sides of the player spots.
+
+    The Rifle is emulated using the mouse. Any cartridge that powers the rifle
+    will cause a little sight to appear on the screen, which can be controlled
+    by the mouse. The Left Mouse button is fire, the Right Mouse button is the
+    reset. A "bullet" is fired on the off->on transition of the Left button.
+
+    The keys 1,2,3,4 can be used to "trim" the Odyssey. Keys 1 and 2 trim
+    the ball speed, Keys 3 and 4 the wall position. Values can be 50% to
+    150% of normal. Note that you can change those parameters on a real
+    Odyssey.
+
+
+Odyssey models:
+---------------
+
+    There are two different Odyssey models. One has a fast ball circuit
+    connected via pin 32 [1TL200 BLAK]. The other has this pin unconnected,
+    and a wierd circuit connected to the ball size circuitry. I haven't got
+    a clue what this does yet, other than it affects the ball size, but
+    it is turned on via pin 24 [1TL200 BK12]. On the "other" model, the
+    corresponding pin is not connected.
+
+    Neither of these are used in any of the carts I know of, so I've ignored
+    them for the time being.
+
+
+Cartridges:
+-----------
+
+    The cartridges are just text files specifying the connections and the
+    overlay eventually used. Additionally, the overlays can be made opaque.
+    What this means is that the pixel at the top left corner of the screen
+    is the only transparent one, and the "spots" are hidden when they go
+    behind every other colour. In the future, the opacity will be replaced
+    by transparency, since some colors are more or less opaque.
+
+
+    An example :- (The "Tennis" Game)
+
+        2-4
+        6-8-10-20-22
+        30-34
+        31-39
+        35-37
+        42-44
+        @TENNIS.BO1
+        OPAQUE
+
+    The numbers say what pins are connected to what. These are *not* the pins
+    in David's site, or Shaun's FAQ, but those on the original schematics.
+    The last two lines tell us to use TENNIS.BO1 as the backdrop (overlay),
+    and that it is opaque (actually in reality it isn't).
+
+    The TENNIS.BO1 file is an RLE Compressed BMP file containing the
+    graphics of the overlay. You can design your own overlays and use
+    them with the emulator. To do so, you must use 320 x 200 x 8 bit colour
+    BMP files that you will later convert to RLE files using the BMPTORLE.EXE
+    utility. This program is used as follows: BMPTORLE Source.BMP Target.BO1 .
+
+
+OdyEmu.Ini
+-----------
+
+    This file contains the internal settings of the emulator. Note that
+    some parameters could let you think that there is no real emulation.
+    This is obviously false: all the settings can be done on a real
+    Odyssey, except a few ones which are still required by the emulator,
+    due to some parts for which an emulation was absolutely not relevant.
+    Don't fiddle with this file without taking a copy. The one thing I'll
+    let you change is Auto1 and Auto2, which makes a side play by itself.
+    You can also do the equivalent of twiddling the trimmers in the circuit
+    (actually you change the capacitors), and size the various objects.
+
+
+Known Limitations:
+------------------
+
+    Do not worry if you haven't got the faintest idea what any of this means.
+    The following lines describe the limitations of the emulator because of
+    the operation of a real Odyssey. Do not pay attention to the meaning of
+    what is written there. Just browse this text when you found something
+    wrong in the emulation, and want to know what the problem is.
+
+    Circuits can also be powered via the hand control buttons. At present,
+    they are powered only via connections to pin 6. So whilst I think it
+    would be possible to have a hand controller disabling screen elements,
+    it won't work. Actually, I'm not sure if it is possible anyway :)
+    [You can of course disable them by dragging the video signal to 0V]
+
+    Damping is extremely simple. A connection 3-5 or 26-28 will damp both x
+    and y axes. In reality 3-26 and 5-28 are possible and also only one may be
+    damped. It should also be possible to connect them together, though I
+    haven't got a clue what this will actually do.
+
+    Collisions between objects causing flip flops to toggle, or circuit
+    elements to be crowbarred only works for multiple spot collisions when
+    there are two of them. It would be possible to crowbar on (say) collisions
+    of ball and both players simultaneously, but this doesn't work.
+
+    When evaluating, the system doesn't check that the appropriate signal lines
+    (2 for each player, 3 for ball !) are used to make the correct AND gate
+    circuitry. Some come from the spot generators, others from the video
+    mixer. Basically use the ones used in the real games :)
+
+    If Ball.Wall (logic combination) is used in a non-gate-matrix circuit,
+    it will detect ball.wall globally as opposed to only at the collision
+    point. Basically don't use the ball.wall line in anything other than an
+    object collision circuit.
+
+    The Ball Flip Flop cannot operate in a scanline mode, only a frame one.
+    You could create mad cartridge that toggled it at different scanline
+    positions. This won't work with the emulator, so try with your old
+    Odyssey.
+
+    Some circuits have a pseudo wall where the wall circuitry is powered
+    indirectly through pin 10, which produces a barely visible wall in the
+    wrong place. This is not emulated, and is probably a manufacturing mistake
+    on the cartridge(s).
+
+
+Technical Notes:
+----------------
+
+    This was written in Borland Turbo Pascal 5.5 (I hate the name Inprise).
+    If you want the Microsoft Windows version, attach a 4Mb file of junk to
+    the end of the .EXE using "COPY" and run it on an original IBM PC/XT at
+    4.77Mhz.
+
+
+What is emulated:
+-----------------
+
+    - The complete Odyssey system is emulated
+    - The rifle extention (Shooting Gallery) is emulated with the mouse
+    - All of the 12 Odyssey cartridges are provided
+    - The emulator saves the states of the controllers since some games use
+      more than one cartridge (each cartridge being used for a part of the
+      play)
+
+
+What you can do with the current version of the emulator
+--------------------------------------------------------
+
+    You can try all the 12 Odyssey cartridges. You will only miss the
+    accessories to play the games which require them.
+
+    Playable games:
+
+        TABLE TENNIS : run the emulator with CART1.MO1
+        TENNIS : run the emulator with TENNIS.MO1
+        VOLLEYBALL : no overlay, run the emulator with CART7.MO1
+
+
+What has to be done:
+--------------------
+
+    - The missing overlays of the games
+    - Manager for the accessories required to play the games which use them
+    - Odyssey manual available whenever required durring emulation
+    - Scanline mode to make it more real...
+
+
+In case of problems:
+--------------------
+
+    Please do not email us unless you get a REAL problem with the emulator.
+    Remember: this is a DOS program, so don't complain if WINDOZE makes it
+    crash. If you don't know how to access MSDOS, go to a boot sale and get
+    a cheap 386 machine. The emulator does not require more than a basic
+    286 machine with a VGA card.
+
+    People willing to help with artwork are MORE THAN WELCOME. We are
+    programers, not "artworkers". Your artwork is needed to improve the
+    quality of the emulator. If you can help, you are a great ressource.
+
+
+Help David Winter and his collections:
+--------------------------------------
+
+    David collects old videogame stuff: from the first PONG machines to the
+    late cartridge-based consoles. If you have an old thing that you would
+    get rid of, you can donate it to his collection.
+
+
+Contacting us:
+--------------
+
+    You can contact David by email at d_winter@hotmail.com .
+    You can contact Paul by email at AutismUK@aol.com .
+
+
+Thanks:
+-------
+
+    Before all, I [David Winter] would like to personally thank Ralph Baer
+    (the inventor of the videogame system and the Odyssey), for always being
+    there for helping as much as he could, for passing a long time to find
+    the information I was looking for. Without him, the emulator would have
+    never been done.
+
+    Thanks to the people who made the Odyssey schematics available online,
+    and the people who kept their Odyssey consoles which later went to
+    David's collection.
+
+    Thanks for all the emulator developers, the webmasters of emulation and
+    retrogaming sites, and the videogame collectors.
+
+    And of course: thank you for using our emulator. We've worked hard to
+    make it work, and we hope you'll like it.
+
+
+
+Paul Robson and David Winter, December 1999.

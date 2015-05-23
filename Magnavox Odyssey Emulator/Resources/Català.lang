@@ -1,0 +1,132 @@
+﻿//GENERAL INFO
+StringCancel=Cancel·lar
+StringOK=Ok
+StringSave=Desar
+
+
+//MAIN SCREEN
+StringCartridge=Cartutx:
+StirngOverlay=Overlay:
+StringRun=Arrencar:
+
+ToolTipCartridge=Selecciona un Cartutx
+ToolTipOverlay=Selecciona un Overlay
+ToolTipRun=Arrencar l'Emulador!
+ToolTipSettings=Configuració
+
+//OVERLAY SELECTOR
+StringSelectAnOverlay=Selecciona un Overlay
+//OVERLAY EDIT
+StringEdit=Edició
+StringOverlaySettings=Configuració de l'Overlay
+StringOpacity=Opacitat
+StringEnabled=Activat
+ToolTipOpacityEnabled=Si s'activa, el color seleccionat quedarà darrere les pales
+StringOpaqueColor=Color Opac
+ToolTipOpaqueColor=Uso: Activar Color Opac primer i seleccionar un color de l'overlay
+StringAsociate=Associar
+ToolTipAsociate=Si està activat el cartutx associat serà seleccionat en seleccionar aquest overlay
+StringNum=Num
+ToolTipNum=Cartutx associat per aquest overlay
+StringDragAndDropInfo=Arrossega aquí aquestes imatges per crear un nou Overlay
+ToolTipDragAndDrop=Utilitza preferiblement arxius png malgrat que funciona amb qualsevol tipus d'imatge
+StringNote=NOTA:
+StringColorInfo=La imatge serà convertida a 256 Colors i escalada a 320x200.
+
+		//SETTINGS//
+		
+//CAPACITORS & PERFORMANCE
+StringCapacitorsAndPerformance=Condensadors i Rendiment
+StringBatSpotH=Lloc Pala H
+ToolTipBatSpotH=Ajusta el lloc horitzontal de les pales
+StringBatSpotV=Lloc Pala V
+ToolTipBatSpotV=Ajusta el lloc vertical de les pales
+StringBatDampH=Rebot Pala H
+ToolTipBatDampH=Ajusta el rebot horizontal de les pales
+StringBatDampV=Rebot Pala V
+ToolTipBatDampV=Ajusta el rebot vertical de les pales
+StringBallSpotH=Lloc Pilota H
+ToolTipBallSpotH=Ajusta el lloc horitzontal de la pilota
+StringBallSpotV=Lloc Pilota V
+ToolTipBallSpotV=Ajusta el lloc vertical de la pilota
+StringBatAceleration=Aceler. Pala
+ToolTipBatAceleration=Ajusta l'acceleració de les pales
+StringBatDeceleration=Desaccel. Pala
+ToolTipBatDeceleration=Ajusta la desacceleració de les pales
+StringEngAceleration=Aceleration Eng.
+ToolTipEngAceleration=Ajusta l'acceleració de l'english
+StringEngDeceleration=Desaccel. Eng.
+ToolTipEngDeceleration=Ajusta la desacceleració de l'english
+StringCapacitorsTitle=CONDENSADORS
+StringCapacitorsInfo=En aquesta part es defineix la càrrega dels condensadors, la ràtio al qual els objectes es mouran poc a poc o ràpid, A càrrega més alta, més a poc a poc. NO són ​​els mateixos valors que en l'esquema original.
+StringBatSpots=PUNTS DE LES PALAS
+StringBatSpotsInfo=Ajustar el rebot per 3-5 y/o 26-28.
+
+
+//OBJECT SIZES
+StringObjectSizes=Mida dels Objectes
+StringBatSizeH=Mida Pala H
+ToolTipBatSizeH=Ajusta la mida horitzontal de les pales
+StringBatSizeV=Mida Pala V
+ToolTipBatSizeV=Ajusta la mida vertical de les pales
+StringBallSize=Mida Pilota
+ToolTipBallSize=Ajusta la mida de la pilota (quadrat) s'assigna el mateix valor a l'altura i l'ample
+StringWidthWallSize=Mida Paret
+ToolTipWidthWallSize=Ajusta la mida de la paret
+StringWidthWallWide=Ample Paret
+ToolTipWidthWallWide=Ajusta l'ample de la paret
+StringWallPercentage=Porcentatge Paret
+ToolTipWallPercentage=Ajusta el porcentatge de la paret
+StringWallPosition=Posició Paret
+ToolTipWallPosition=Ajusta la posició de la paret
+StringSizeInfo=En aquesta part es defineix la mida dels objectes. El valor màxim és 6200.
+StringBatSizeTitle=MIDA DE PALES:
+StringBatSizeInfo=Mida de la pales per ambdós jugadors. (quadrat 11/16 "en un monitor de 14")
+StringBallSizeTitle=MIDA DE LA PILOTA;
+StringBallSizeInfo=Els valors horitzontal i vertical s'ajusten amb el mateix valor.
+StringWallWidthTitle=AMPLE DE LA PARET
+StringWallWidthInfo=Normal = 7/16" en un monitor de 14".
+StringWallPercentageInfo=Amb un tamany "petit", el porcentatge actual de la paret.
+StringWallPositionInfo=Posició Horitzontal de la paret més propera.
+
+
+//KEYBOARD
+StringKeboardSettings=Ajustaments de Teclat
+StringPlayer1=Jugador 1
+StringPlayer2=Jugador 2
+StringMoveUp=Moure a dalt
+StringMoveDown=Moure a baix
+StringMoveRight=Moure a la dreta
+StringMoveLeft=Moure a l'esquerra 
+StringEnglishUp=English a dalt
+StringEnglishDown=English a baix
+StringServeBall=Servir
+StringReset=Reset
+
+//OTHER SETTING
+StringOtherSettings=Altres ajustaments
+StringGlobalSettings=Configuració General
+StringAutomaticPlayer=Jugadors Automàtics
+StringColors=Colors
+StringColor=Color
+StringTColor=TColor
+StringDOSNEnviornment=Entorn DOS
+StringFullScreen=Pantalla Completa
+StringHideCursor=Amagar Cursor
+StringLanguage=Idioma
+StringOtherCapacitors=Altres condesadors;
+StringWallCapacitors=Cnd. Paret
+StringRiffleCapacitor=Cnd. Rifle
+StringRiffleCapacitorTitle=CONDENSADOR DEL RIFLE:
+StringRiffleCapacitorInfo=Realment no és un condensador. Ajusta la ràtio de moviminent dels cursors quan s'usa el rifle.
+StringUserFolder=Carpeta d'Usuari
+StringUserFolderInfo=La carpeta d'usuari s'usa per emmagatzemar la configuració de teclat, idiomes, overlays ... necearia per executar l'emulador
+StringOpen=Obrir
+StringOutput=Sortida;
+StringResolution=Resolució
+
+
+
+
+
+
